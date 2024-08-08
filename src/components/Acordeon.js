@@ -17,10 +17,14 @@ const Acordeon = ({ title, content }) => {
     }, [isExpanded]);
 
     const panelStyles = {
-        background: 'gray',
-        color: '#FFF',
-        padding: '0.5em 1em'
-    }
+        backgroundColor: 'gray',
+        color: '#fff',
+        padding: '0.5em 1em',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+    };
+    
 
     const contentStyles = {
         height: contentHeight,
@@ -35,7 +39,8 @@ const Acordeon = ({ title, content }) => {
 
     const imageStyles = {
 
-        width: '18px'
+        width: '18px',
+        transform: isExpanded ? 'rotate(-45deg)' : 'rotate(-90deg)'
     }
 
 
